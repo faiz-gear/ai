@@ -22,6 +22,12 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
+    },
+    "./rsc": {
+      "types": "./dist/rsc/index.d.ts",
+      "react-server": "./dist/rsc/rsc-server.mjs",
+      "import": "./dist/rsc/rsc-client.mjs",
+      "module": "./dist/rsc/rsc-client.mjs"
     }
   },
   "files": [
@@ -29,10 +35,13 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
+    "ai": "5.0.0-canary.3",
+    "@ai-sdk/provider": "2.0.0-canary.1",
     "@ai-sdk/provider-utils": "3.0.0-canary.2",
     "@ai-sdk/ui-utils": "2.0.0-canary.2",
     "swr": "^2.2.5",
-    "throttleit": "2.1.0"
+    "throttleit": "2.1.0",
+    "jsondiffpatch": "0.6.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
@@ -41,6 +50,8 @@
     "@types/node": "20.17.24",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "4.3.3",
+    "react-server-dom-webpack": "18.3.0-canary-eb33bd747-20240312",
     "@vercel/ai-tsconfig": "workspace:*",
     "eslint": "8.57.1",
     "eslint-config-vercel-ai": "workspace:*",
